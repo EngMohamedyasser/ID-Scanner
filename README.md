@@ -1,9 +1,6 @@
 # Developed by:   
-   -Aliaa Mahmoud Ahmed      
-   -Mostafa Atef Abd-Allah     
-   -Mostafa Fahmy Al-Noqrashy      
-   -Ola Hamdy Ahmed     
-     Senior students at Faculty of Engineering, Ain-Shams University   
+      Mohamed Shehab     
+     Graduate students at school of Engineering, Southern illinois university University   
      
 # Description
 Copying information from national ID card is needed in each and every place we go to everyday, either to record it or to fill it in an application form. An error in only one digit can delay an urgent process for days.   
@@ -33,9 +30,3 @@ sudo apt-get install tesseract-ocr-hin
 sudo ./makefile   
 ```     
 2.Execute the command "python3 main.py".
-
-# Test set
-https://drive.google.com/open?id=1gmZd9nh37YwWUn7yeGeQdCAaWFBep9jD
-
-# YouTube tutorial
-https://www.youtube.com/watch?v=xUIy5EQ3R6s&t
