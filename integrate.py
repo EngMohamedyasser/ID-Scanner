@@ -9,40 +9,7 @@ name,add,IDNumber,BDate = '','','',''
 job,job2,gender,religion,a3zb,husband,govern = '','','','','','',''
 #Reading the front side of the ID card
 def front_read(front_src):
-	
-	im_gray = cv2.imread(front_src, cv2.IMREAD_GRAYSCALE)
-	im_bw = im_gray
-	thresh = 95
-	im_bw = cv2.threshold(im_bw, thresh, 255, cv2.THRESH_BINARY)[1]
-	global pic
-	global name
-	global add
-	global IDNumber
-	global BDate
-	global govern
-	# split the img
-	pic = im_gray[50:350,50:275]
-	Name = im_bw[150:310, 400:1000]
-	address = im_bw[300:450, 400:1000]
-	ID = im_bw[500:560,400:1000]
-	# Reading the splitted images
-	name=image_to_string(Name,lang="ara")
-	add=image_to_string(address,lang="ara")
-	IDNumber=image_to_string(ID,lang="hin")
-	IDNumber= ''.join(IDNumber.split())
-	
-	#Calculate the birth date
-	if IDNumber[0]=='2': 
-		year = '19' + IDNumber[1:3]
-	else:
-		year = '20' + IDNumber[1:3]
-	month = IDNumber[3:5]
-	day = IDNumber[5:7]
-	BDate = year + '/' + month + '/'+ day
-	#Getting the governorate.
-	govern = pob.placeOfBirth(IDNumber) 
 
-# split image
 def crop(dim1,dim2,dim3,dim4,name,img_binary,text_all):
 	area=(dim1,dim2,dim3,dim4)
 	cropped_img=img_binary.crop(area)
